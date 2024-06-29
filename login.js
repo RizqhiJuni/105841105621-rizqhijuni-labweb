@@ -1,10 +1,10 @@
-import { StyleSheet, View, Text, TextInput, Image } from 'react-native';
+import { StyleSheet, View, Text, TextInput, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { useFonts } from 'expo-font';
 
 const ButtonCustom = ({ text, color }) => {
   return (
-    <View style={{
+    <TouchableOpacity style={{
       backgroundColor: color,
       width: '100%',
       height: 50,
@@ -16,11 +16,11 @@ const ButtonCustom = ({ text, color }) => {
         textAlign: 'center',
         color: 'white',
         fontSize: 18,
-        fontWeight: 'bold',
+        fontFamily: 'MetroMedium'
       }}>
         {text}
       </Text>
-    </View>
+    </TouchableOpacity>
   )
 }
 
@@ -49,24 +49,28 @@ const App = () => {
         'MetroBold' : require('./assets/fonts/Metropolis-Bold.otf'),
         'MetroMedium' : require('./assets/fonts/Metropolis-Medium.otf')   
     } )
-    
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>Sign up</Text>
+        <Text style={styles.title}>Login</Text>
         <View style={styles.form}>
-          <TextInputCustom placeholder="Name" typekeyboard="default" />
           <TextInputCustom placeholder="Email" typekeyboard="email-address" />
           <TextInputCustom placeholder="Password" typekeyboard="default" />
-          <ButtonCustom text="SIGN UP" color="red" />
+          <TouchableOpacity>
+            <Text style={styles.forgotPassword}>Forgot your password?</Text>
+          </TouchableOpacity>
+          <ButtonCustom text="LOGIN" color="red" />
         </View>
       </View>
-      <View style={styles.logoRow}>
-        <View style={styles.logoContainer}>
-          <Image source={require('./assets/facebook.png')} style={styles.logo} />
-        </View>
-        <View style={styles.logoContainer}>
-          <Image source={require('./assets/google.png')} style={styles.logo} />
+      <View style={styles.socialLogin}>
+        <Text style={styles.orText}>Or login with social account </Text>
+        <View style={styles.logoRow}>
+          <View style={styles.logoContainer}>
+            <Image source={require('./assets/google.png')} style={styles.logo} />
+          </View>
+          <View style={styles.logoContainer}>
+            <Image source={require('./assets/facebook.png')} style={styles.logo} />
+          </View>
         </View>
       </View>
     </View>
@@ -84,17 +88,30 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     justifyContent: 'center',
-    //alignItems: 'center',
+    
   },
   title: {
     fontSize: 32,
-    //fontWeight: 'bold',
     marginBottom: 40,
-    fontFamily: 'MetroBold'
+    fontFamily:'MetroBold'
   },
   form: {
     width: '100%',
     alignItems: 'center',
+  },
+  forgotPassword: {
+    color: 'black',
+    alignSelf: 'flex-end',
+    marginRight: 10,
+    marginTop: -10,
+    marginBottom: 20,
+  },
+  socialLogin: {
+    alignItems: 'center',
+  },
+  orText: {
+    fontSize: 16,
+    marginBottom: 20,
   },
   logoRow: {
     flexDirection: 'row',
