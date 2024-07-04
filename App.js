@@ -10,9 +10,9 @@ function HomeScreen({navigation}) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Home Screen</Text>
-     <Button title="ke halaman login" onPress={() => navigation.navigate('Login')} /> 
+     {/* <Button title="ke halaman login" onPress={() => navigation.navigate('Login')} />  */}
      <Button title="ke singup" onPress={() => navigation.navigate('singup')} /> 
-     <Button title="ke forget password" onPress={() => navigation.navigate('ForgetPassword')} /> 
+     {/* <Button title="ke forget password" onPress={() => navigation.navigate('ForgetPassword')} />  */}
     </View>
    
   );
@@ -24,10 +24,10 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Login" component={Loginpage} />
-        <Stack.Screen name="singup" component={signuppage} />
-        <Stack.Screen name="ForgetPassword" component={ForgetPasswordpage} /> 
+        <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}}/>
+        <Stack.Screen name="Login" component={Loginpage} options={{headerShown: false}}/>
+        <Stack.Screen name="singup" component={signuppage} options={{headerShown: false}}/>
+        <Stack.Screen name="ForgetPassword" component={ForgetPasswordpage} options={{headerShown: false}}/> 
       </Stack.Navigator>
     </NavigationContainer>
   );

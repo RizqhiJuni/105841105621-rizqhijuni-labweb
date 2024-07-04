@@ -44,7 +44,7 @@ const TextInputCustom = ({ placeholder, typekeyboard }) => {
   )
 }
 
-const App = () => {
+const App = ({navigation}) => {
     const [dapatFont]= useFonts( {
         'MetroBold' : require('./assets/fonts/Metropolis-Bold.otf'),
         'MetroMedium' : require('./assets/fonts/Metropolis-Medium.otf')   
@@ -58,6 +58,9 @@ const App = () => {
           <TextInputCustom placeholder="Name" typekeyboard="default" />
           <TextInputCustom placeholder="Email" typekeyboard="email-address" />
           <TextInputCustom placeholder="Password" typekeyboard="default" />
+          <View>
+            <Text style={styles.alreadytext} onPress={() => navigation.navigate('Login')}>Already have an account?</Text>
+          </View>
           <ButtonCustom text="SIGN UP" color="red" />
         </View>
       </View>
@@ -95,6 +98,14 @@ const styles = StyleSheet.create({
   form: {
     width: '100%',
     alignItems: 'center',
+  },
+  alreadytext: {
+    color: 'black',
+    alignSelf: 'flex-end',
+    // marginRight: 10,
+    marginTop: -10,
+    marginBottom: 20,
+    marginLeft:150
   },
   logoRow: {
     flexDirection: 'row',

@@ -44,7 +44,7 @@ const TextInputCustom = ({ placeholder, typekeyboard }) => {
   )
 }
 
-const App = () => {
+const App = ({navigation}) => {
     const [dapatFont]= useFonts( {
         'MetroBold' : require('./assets/fonts/Metropolis-Bold.otf'),
         'MetroMedium' : require('./assets/fonts/Metropolis-Medium.otf')   
@@ -56,9 +56,9 @@ const App = () => {
         <View style={styles.form}>
           <TextInputCustom placeholder="Email" typekeyboard="email-address" />
           <TextInputCustom placeholder="Password" typekeyboard="default" />
-          <TouchableOpacity>
-            <Text style={styles.forgotPassword}>Forgot your password?</Text>
-          </TouchableOpacity>
+          <View>
+            <Text style={styles.forgotPassword} onPress={() => navigation.navigate('ForgetPassword')}>Forgot your password?</Text>
+          </View>
           <ButtonCustom text="LOGIN" color="red" />
         </View>
       </View>
@@ -102,9 +102,10 @@ const styles = StyleSheet.create({
   forgotPassword: {
     color: 'black',
     alignSelf: 'flex-end',
-    marginRight: 10,
+    // marginRight: 10,
     marginTop: -10,
     marginBottom: 20,
+    marginLeft:170
   },
   socialLogin: {
     alignItems: 'center',
