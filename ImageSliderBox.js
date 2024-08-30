@@ -6,10 +6,10 @@ class Home extends Component {
     render() {
         const mainImage = require('./assets/download.jpeg');
         const newImages = [
-            { source: require('./assets/foto4.jpeg'), title: 'Palestine flag', subtitle: '10$' },
-            { source: require('./assets/foto1.jpeg'), title: 'Palestine', subtitle: '12$' },
-            { source: require('./assets/foto2.jpeg'), title: 'Shindaime', subtitle: '15$' },
-            { source: require('./assets/foto3.jpeg'), title: 'Flag', subtitle: '15$' },
+            { source: require('./assets/foto4.jpeg'), title: 'model1', subtitle: '10$' },
+            { source: require('./assets/foto1.jpeg'), title: 'model2', subtitle: '12$' },
+            { source: require('./assets/foto2.jpeg'), title: 'model3', subtitle: '15$' },
+            { source: require('./assets/foto3.jpeg'), title: 'model4', subtitle: '15$' },
             
         ];
 
@@ -80,3 +80,4 @@ class Home extends Component {
 }
 
 export default Home;
+
