@@ -4,20 +4,20 @@ import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, ScrollVi
 
 class Home extends Component {
     render() {
-        const mainImage = require('./assets/foto4.jpeg');
+        const mainImage = require('./assets/ip.jpg');
         const newImages = [
-            { source: require('./assets/foto1.jpeg'), title: 'Evening Dress', subtitle: '10$' },
-            { source: require('./assets/foto2.jpeg'), title: 'Sport Dress', subtitle: '12$' },
-            { source: require('./assets/foto3.jpeg'), title: 'Sundress', subtitle: '15$' },
-            { source: require('./assets/foto3.jpeg'), title: 'Pkk', subtitle: '15$' },
+            { source: require('./assets/ip15.jpg'), title: 'Iphone 15 ProMax', subtitle: 'Rp. 25.000.000' },
+            { source: require('./assets/ip15p.jpg'), title: 'Iphone 15 Plus', subtitle: 'Rp. 20.000.000' },
+            { source: require('./assets/ip14.jpg'), title: 'Iphone 14 Promax', subtitle: 'Rp. 22.000.000' },
+            { source: require('./assets/ip13p.jpg'), title: 'Iphone 13 ProMax', subtitle: 'Rp. 18.000.000' },
 
             
         ];
         const twoimage = [
-            { source: require('./assets/foto1.jpeg'), title: 'Pkk', subtitle: '15$' },
-            { source: require('./assets/foto2.jpeg'), title: 'Pkk', subtitle: '15$' },
-            { source: require('./assets/foto3.jpeg'), title: 'Pkk', subtitle: '15$' },
-            { source: require('./assets/foto1.jpeg'), title: 'Pkk', subtitle: '15$' },
+            { source: require('./assets/ip12.jpg'), title: 'Iphone 12', subtitle: 'Rp. 11.000.000' },
+            { source: require('./assets/ip13m.jpg'), title: 'Iphone 13 Mini', subtitle: 'Rp. 13.000.000' },
+            { source: require('./assets/ip11.jpg'), title: 'Iphone 11', subtitle: 'Rp. 7.000.000' },
+            { source: require('./assets/ip14b.jpg'), title: 'Iphone 14', subtitle: 'Rp. 15.000.000' },
         ];
 
         return (

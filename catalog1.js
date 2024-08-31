@@ -5,8 +5,8 @@ const katalog1 = () => {
   const categories = ['T-shirt', 'Blouse', 'Dress', 'Crop Tops'];
   const [products, setProducts] = useState([
     {
-      name: 'Casual T-shirt',
-      image: require('./assets/foto1.jpeg'),
+      name: 'Iphone 15 ProMax',
+      image: require('./assets/ip15.jpg'),
       color: 'Brown',
       size: 'M',
       price: 25,
@@ -52,7 +52,7 @@ const katalog1 = () => {
       stars.push(
         <Image
           key={i}
-          source={i <= rating ? require('./assets/star.png') : require('./assets/starno.png')}
+          source={i <= rating ? require('./assets/ip13m.jpg') : require('./assets/ip13m.jpg')}
           style={{ width: 18, height: 18 }}
         />
       );

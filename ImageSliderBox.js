@@ -4,12 +4,12 @@ import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, ScrollVi
 
 class Home extends Component {
     render() {
-        const mainImage = require('./assets/download.jpeg');
+        const mainImage = require('./assets/iphone.jpg');
         const newImages = [
-            { source: require('./assets/foto4.jpeg'), title: 'model1', subtitle: '10$' },
-            { source: require('./assets/foto1.jpeg'), title: 'model2', subtitle: '12$' },
-            { source: require('./assets/foto2.jpeg'), title: 'model3', subtitle: '15$' },
-            { source: require('./assets/foto3.jpeg'), title: 'model4', subtitle: '15$' },
+            { source: require('./assets/ip15.jpg'), title: 'Iphone15', subtitle: '10$' },
+            { source: require('./assets/ip15p.jpg'), title: 'Iphone15p', subtitle: '12$' },
+            { source: require('./assets/ip14.jpg'), title: 'Iphone14', subtitle: '15$' },
+            { source: require('./assets/ip13p.jpg'), title: 'Iphone13', subtitle: '15$' },
             
         ];
 

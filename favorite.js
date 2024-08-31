@@ -5,10 +5,10 @@ import ImageSlider from 'react-native-image-slider';
 class imageSlider extends Component {
   render() {
     const images = [
-      require('./assets/foto1.jpeg'),
-      require('./assets/foto2.jpeg'),
-      require('./assets/foto3.jpeg'), // Repeated image as example
-      require('./assets/foto4.jpeg'), // Repeated image as example
+      require('./assets/ip15.jpg'),
+      require('./assets/ip12.jpg'),
+      require('./assets/ip14.jpg'), // Repeated image as example
+      require('./assets/ip13p.jpg'), // Repeated image as example
     ];
 
     return (
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
   },
   customImage: {
     width: 300,
-    height: 500,
+    height: 300,
   },
   buttons: {
     flexDirection: 'row',
