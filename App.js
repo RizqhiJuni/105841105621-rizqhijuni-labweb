@@ -19,7 +19,7 @@ import Favorit from './assets/icon/staraktif.png';
 import Favoriinactive from './assets/icon/star.png';
 import Profil from './assets/icon/useraktif.png';
 import Provilinactiv from './assets/icon/user.png';
-
+import Api from './api.js';
 
 const Tab = createBottomTabNavigator();
 function MyTabs() {
@@ -105,16 +105,17 @@ const Stack = createNativeStackNavigator();
 
 function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={MyTabs} options={{headerShown: false}} />
-        <Stack.Screen name="profil" component={profil} options={{headerShown: false}} />
-        <Stack.Screen name="favorite" component={favorite} options={{headerShown: false}} />
-        <Stack.Screen name="bag" component={bag} options={{headerShown: false}} />
-        <Stack.Screen name="shop" component={shop} options={{headerShown: false}} />
-        {/* <Stack.Screen name="Login" component={LoginPage}options={{headerShown: false}} /> */}
-      </Stack.Navigator>
-    </NavigationContainer>
+    // <NavigationContainer>
+    //   <Stack.Navigator>
+    //     <Stack.Screen name="Home" component={MyTabs} options={{headerShown: false}} />
+    //     <Stack.Screen name="profil" component={profil} options={{headerShown: false}} />
+    //     <Stack.Screen name="favorite" component={favorite} options={{headerShown: false}} />
+    //     <Stack.Screen name="bag" component={bag} options={{headerShown: false}} />
+    //     <Stack.Screen name="shop" component={shop} options={{headerShown: false}} />
+    //     {/* <Stack.Screen name="Login" component={LoginPage}options={{headerShown: false}} /> */}
+    //   </Stack.Navigator>
+    // </NavigationContainer>
+    <Api />
   );
 }
 
